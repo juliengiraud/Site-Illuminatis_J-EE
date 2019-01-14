@@ -1,5 +1,8 @@
 package metier;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
 public class User {
     
     private String nom;
@@ -16,6 +19,10 @@ public class User {
     
     public String getPassword() {
         return this.password;
+    }
+    
+    public Boolean isConnecte() {
+        return true;
     }
     
 }
