@@ -12,8 +12,13 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <form action="ActionServlet" method="post">
-            
+        <form action="/Controleur" method="post">
+            <input type="text" id="theinput" name="theinput" />
+            <select name="thelist" onChange="combo(this, 'theinput')">
+              <option>un</option>
+              <option>deux</option>
+              <option>trois</option>
+            </select> 
             <input type="submit" value="Valider" />
         </form>
     </body>
