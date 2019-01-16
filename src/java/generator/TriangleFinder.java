@@ -11,6 +11,21 @@ package generator;
  */
 public class TriangleFinder {
     private float nbTriangle;
+    private String pays;
+    
+    private TriangleFinder(String pays)
+    {
+        this.pays = pays;
+    }
+    
+    private float findTriangle()
+    {
+        for(char c : pays.toCharArray())
+        {
+            nbTriangle += c;
+        }
         
+        return nbTriangle;
+    }
     
 }
