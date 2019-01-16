@@ -3,6 +3,8 @@ package persistance.modelDAO;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import metier.User;
@@ -16,23 +18,23 @@ public class UserDAO extends DAO implements IUserDAO {
     }
 
     @Override
-    public User getUser() {
-        
+    public List<User> getUsers() {
         ResultSet rset;
         Statement stmt;
-        User user = null;
+        List<User> users = null;
         String query = "SELECT * FROM User";
         try {
             stmt = connexionBD.createStatement();
             rset = stmt.executeQuery(query);
-            if (rset.next()) {
-                user = new User(rset.getString(1), rset.getString(2));
+            users = new ArrayList<>();
+            while (rset.next()) {
+                users.add(new User(rset.getString(1), rset.getString(2)));
             }
         }
         catch (SQLException ex) {
             Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex.getMessage());
         }
-        return user;
+        return users;
     }
     
 }

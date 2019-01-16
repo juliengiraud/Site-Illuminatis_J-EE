@@ -12,7 +12,8 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <form action="/Controleur" method="post">
+        <h1>Bravo <%= request.getAttribute("identifiant") %>, vous êtes connectés !</h1>
+        <form action="controleur" method="post">
             <input type="text" name="theinput" />
             <select name="thelist" onChange="combo(this, 'theinput')">
               <option>Europe</option>
