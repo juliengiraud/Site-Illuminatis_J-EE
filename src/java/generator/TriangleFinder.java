@@ -12,18 +12,21 @@ package generator;
 public class TriangleFinder {
     private float nbTriangle;
     private String pays;
+    private int nbReptilien;
     
     private TriangleFinder(String pays)
     {
         this.pays = pays;
+        this.nbReptilien = (int)Math.random() * 1000;
     }
     
     private float findTriangle()
     {
         for(char c : pays.toCharArray())
         {
-            nbTriangle += c;
+            nbTriangle += c + (int)Math.random()*1000;
         }
+        nbTriangle/= nbReptilien;
         
         return nbTriangle;
     }
