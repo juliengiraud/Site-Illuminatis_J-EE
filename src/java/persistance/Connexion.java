@@ -18,11 +18,11 @@ public class Connexion extends MariaDbDataSource {
     public static Connexion getMdbDataSource() {
     
         if (mds == null) {
-            try {
+            try {/*
                 Properties prop = new Properties();
                 FileInputStream fichier = null;
                 try {
-                    fichier = new FileInputStream("src/persistance/connexionMariaIUT.properties");
+                    fichier = new FileInputStream("connexionMariaIUT.properties");
                 }
                 catch (FileNotFoundException ex1) {
                     System.out.println("Fichier de proprietes non trouvé");
@@ -46,16 +46,23 @@ public class Connexion extends MariaDbDataSource {
                 mds.setServerName(prop.getProperty("serveur"));
                 mds.setDatabaseName(prop.getProperty("base"));
                 mds.setUser(prop.getProperty("user"));
-                mds.setPassword(prop.getProperty("pwd"));
-                // pas de service à définir pour MariaDB
+                mds.setPassword(prop.getProperty("pwd"));*/
+                mds = new Connexion ();
+                mds.setPortNumber(3306);
+                mds.setServerName("iutdoua-web.univ-lyon1.fr");
+                mds.setDatabaseName("p1704709");
+                mds.setUser("p1704709");
+                mds.setPassword("cpe7ay5u");
             }
             catch (SQLException ex) {
                 Logger.getLogger(Connexion.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
         else {
-            System.out.println("---(la source de data existe deja)") ;
+            //System.out.println("---(la source de data existe deja)") ;
         }
         return mds;
+        
     } // de getMdbDataSource()
+
 }
