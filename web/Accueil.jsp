@@ -13,11 +13,14 @@
     </head>
     <body>
         <form action="/Controleur" method="post">
-            <input type="text" id="theinput" name="theinput" />
+            <input type="text" name="theinput" />
             <select name="thelist" onChange="combo(this, 'theinput')">
-              <option>un</option>
-              <option>deux</option>
-              <option>trois</option>
+              <option>Europe</option>
+              <option>Ping</option>
+              <option>Amérique sud</option>
+              <option>'Murica (fuck yeah)</option>
+              <option>Internet</option>
+              <option>Bordure extérieur</option>
             </select> 
             <input type="submit" value="Valider" />
         </form>
