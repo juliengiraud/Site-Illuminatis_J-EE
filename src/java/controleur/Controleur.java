@@ -41,15 +41,12 @@ public class Controleur extends HttpServlet {
                 
                 UserDAO userDAO = new UserDAO();
                 List<User> users = userDAO.getUsers();
-                System.out.println("taille de users : " + users.size());
                 User user = null;
-                for (User u : users) {/*
-                    if (u.getNom() == id && u.getPassword() == HashText.sha1(mdp)) {
+                for (User u : users) {
+                    if (u.getNom().equals(id) && u.getPassword().equals(HashText.sha1(mdp))) {
                         user = u;
-                        System.out.println(u.getNom() + "\n" + u.getPassword() + "\n" + HashText.sha1(mdp));
                         break;
-                    }*/
-                    System.out.println("nomBD : " + u.getNom() + "\nmdpBD" + u.getPassword() + "\nmdp" + HashText.sha1(mdp));
+                    }
                 }
                 request.setAttribute("identifiant", id);
                 if (user != null) {
@@ -63,6 +60,7 @@ public class Controleur extends HttpServlet {
                 }
             
             default:
+                System.out.println("la page n'existe pas dans le 'case'");
                 rd = request.getRequestDispatcher("accueil.jsp");
                 rd.forward(request, response);
             

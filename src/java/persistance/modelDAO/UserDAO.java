@@ -28,7 +28,7 @@ public class UserDAO extends DAO implements IUserDAO {
             rset = stmt.executeQuery(query);
             users = new ArrayList<>();
             while (rset.next()) {
-                users.add(new User(rset.getString(1), rset.getString(2)));
+                users.add(new User(rset.getString(2), rset.getString(3)));
             }
         }
         catch (SQLException ex) {
