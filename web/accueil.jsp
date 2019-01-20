@@ -15,7 +15,7 @@
         <h1>Bravo <%= request.getAttribute("identifiant") %>, vous êtes connectés !</h1>
         <form action="controleur" method="post">
             <input type="text" name="theinput" />
-            <select name="thelist" onChange="combo(this, 'theinput')">
+            <select name="pays" onChange="combo(this, 'theinput')">
               <option>Europe</option>
               <option>Ping</option>
               <option>Amérique sud</option>
@@ -23,6 +23,10 @@
               <option>Internet</option>
               <option>Bordure extérieur</option>
             </select> 
+            <select name="arme" onChange="combo(this, 'theinput')">
+              <option>Le Canard Jaune</option>
+            </select> 
+            <input type="hidden" name="page" value="complot" />
             <input type="submit" value="Valider" />
         </form>
     </body>

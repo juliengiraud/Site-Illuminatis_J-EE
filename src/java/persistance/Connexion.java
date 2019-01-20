@@ -18,35 +18,8 @@ public class Connexion extends MariaDbDataSource {
     public static Connexion getMdbDataSource() {
     
         if (mds == null) {
-            try {/*
-                Properties prop = new Properties();
-                FileInputStream fichier = null;
-                try {
-                    fichier = new FileInputStream("connexionMariaIUT.properties");
-                }
-                catch (FileNotFoundException ex1) {
-                    System.out.println("Fichier de proprietes non trouvé");
-                }
-                try {
-                    prop.load(fichier);
-                }
-                catch (IOException ex) {
-                    System.out.println("Erreur lors du chargement du fichier de proprietes mySQL");
-                }
-                finally {
-                    try {
-                        fichier.close();
-                    }
-                    catch (IOException ex) {
-                        System.out.print("Problème d'entree/sortie" + ex.getMessage());
-                    }
-                }
-                mds = new Connexion ();
-                mds.setPortNumber(new Integer(prop.getProperty("port")));
-                mds.setServerName(prop.getProperty("serveur"));
-                mds.setDatabaseName(prop.getProperty("base"));
-                mds.setUser(prop.getProperty("user"));
-                mds.setPassword(prop.getProperty("pwd"));*/
+            try {
+               
                 mds = new Connexion ();
                 mds.setPortNumber(3306);
                 mds.setServerName("iutdoua-web.univ-lyon1.fr");

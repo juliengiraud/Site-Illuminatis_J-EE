@@ -38,7 +38,6 @@ public class Controleur extends HttpServlet {
             case "connexion":
                 String id = request.getParameter("identifiant");
                 String mdp = request.getParameter("mdp");
-                
                 UserDAO userDAO = new UserDAO();
                 List<User> users = userDAO.getUsers();
                 User user = null;
@@ -58,7 +57,13 @@ public class Controleur extends HttpServlet {
                     rd = request.getRequestDispatcher("test.jsp");
                     rd.forward(request, response);
                 }
-            
+            case "complot":
+                response.addHeader("arme",request.getParameter("arme") );
+                response.addHeader("pays",request.getParameter("pays"));
+                
+                rd = request.getRequestDispatcher("complot.jsp");
+                rd.forward(request, response);
+                break;
             default:
                 System.out.println("la page n'existe pas dans le 'case'");
                 rd = request.getRequestDispatcher("accueil.jsp");
@@ -95,8 +100,7 @@ public class Controleur extends HttpServlet {
             Logger.getLogger(Controleur.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-
-
+    
     @Override
     public String getServletInfo() {
         return "Est le controlleur";
