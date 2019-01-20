@@ -12,15 +12,49 @@ import metier.Weapon;
  * @author Short
  */
 public class ReptiliansPopulation {
-    private static int nbReptilians;
-    public static int getNbReptilians() {return nbReptilians;}
-    public static void killReptilians(Weapon weapon)
+    private int nbReptilians;
+    private String message;
+
+    public ReptiliansPopulation(String pays)
+    {
+        switch(pays)
+        {   case "Ping":  
+                nbReptilians = 51; 
+                message ="Principalement des Lolis ..."; 
+                break;
+            case "Amérique Sud":
+                nbReptilians = 5424120; 
+                message ="Ils aiment le sables, vraiment beaucoup"; 
+                break;
+            case "'Murica (fuck yeah)":
+                nbReptilians = 510; 
+                message ="Principalement des politiques, des chefs d'entreprises étrangement.. Pas facile à atteindre !"; 
+                break;
+            case "Internet":
+                nbReptilians = 0; 
+                message ="Oh... des licornes, bien sûr"; 
+                break;
+            case "Bordure extérieur":
+                nbReptilians = -1; 
+                message ="Ils sont dans la terre creuse... crétin"; 
+                break;
+            default:
+                nbReptilians = 0; 
+                message ="Serrieux ?! ça existe ce truc ?"; 
+                break;
+        }
+    }
+    
+    
+    public int getNbReptilians() {return nbReptilians;}
+    public int killReptilians(Weapon weapon)
     {
         nbReptilians -= weapon.getPuissance();
         if(nbReptilians < 0)
         {
             nbReptilians = 0;
         }
+        return nbReptilians;
     }
     
 }

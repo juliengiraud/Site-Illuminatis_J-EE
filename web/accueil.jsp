@@ -9,10 +9,14 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="style.css" />
+
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Bravo <%= request.getAttribute("identifiant") %>, vous êtes connectés !</h1>
+        
+        
+        <h1> <%= request.getAttribute("identifiant") %></h1>
         <form action="controleur" method="post">
             <input type="text" name="theinput" />
             <select name="pays" onChange="combo(this, 'theinput')">
@@ -28,6 +32,19 @@
             </select> 
             <input type="hidden" name="page" value="complot" />
             <input type="submit" value="Valider" />
+        </form>
+        
+        <% 
+            for(int i =0;i<30;i++)
+            {
+                out.print("<br/>");
+            }
+        %>
+        
+        <h1> Triangle !!!! </h1>
+        <form action="controleur" method="post">
+            <input type="hidden" name="page" value="triangle" />
+            <input type="submit" value="Confidientiel" />
         </form>
     </body>
 </html>

@@ -1,10 +1,7 @@
 package persistance;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+
 import java.sql.SQLException;
-import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.mariadb.jdbc.MariaDbDataSource;
@@ -32,10 +29,10 @@ public class Connexion extends MariaDbDataSource {
             }
         }
         else {
-            //System.out.println("---(la source de data existe deja)") ;
+            System.out.println("la source de data existe deja") ;
         }
         return mds;
         
-    } // de getMdbDataSource()
+    } 
 
 }

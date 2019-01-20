@@ -9,14 +9,26 @@ and open the template in the editor.
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css" />
     </head>
     <body>
+        
         <h1> Connexion</h1>
-        <form action="controleur" method="post">   
-            <input type="text" name="identifiant" placeholder="Ex : Roger" size="30" maxlength="10" />
-            <input type="text" name="mdp" placeholder="Ex : Je suis pas un reptilien" size="30" maxlength="10" />
-            <input type="hidden" name="page" value="connexion" />
-            <input type="submit" value="Valider" />
-        </form>
+        <div id="centre">
+        <img src="../img/connexion.png" alt="Un oeil et un triangle">
+         </div>
+            <form action="controleur" method="post">   
+                <div id="centre">
+                <input type="text" name="identifiant" placeholder="Ex : Roger" size="30" maxlength="10" />
+                </div>
+                <div id="centre">
+                <input type="text" name="mdp" placeholder="Ex : Je suis pas un reptilien" size="30" maxlength="10" />
+                </div>
+                <input type="hidden" name="page" value="connexion" />
+                <div id="centre">
+                <input type="submit" value="Valider" />
+                </div>
+            </form>
+        
     </body>
 </html>

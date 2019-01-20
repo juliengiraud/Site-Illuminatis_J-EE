@@ -12,10 +12,15 @@ package metier;
 public class Weapon {
     private String nom;
     private int puissance;
-    public Weapon(String nom, int puissance)
+    private String message;
+    public Weapon(String nom)
     {
         this.nom = nom;
-        this.puissance = puissance;
+        switch(nom)
+        {
+            case "Le Canard Jaune" :this.puissance = 100000;message="Coin.";nom+=".jpg";break;
+            default:message="Je sais pas ce que c'est mais ça a intéret à être efficasse! ";break;
+        }
     }
     public int getPuissance()
     {

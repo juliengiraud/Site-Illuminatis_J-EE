@@ -14,7 +14,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-//import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -68,13 +67,9 @@ public class Controleur extends HttpServlet {
                 System.out.println("la page n'existe pas dans le 'case'");
                 rd = request.getRequestDispatcher("accueil.jsp");
                 rd.forward(request, response);
-            
         }
-        
     }
-    protected void GenerePays(String Pays) {
-        
-    }
+
     
     
     @Override
