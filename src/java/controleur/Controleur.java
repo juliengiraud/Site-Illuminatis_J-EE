@@ -21,11 +21,6 @@ import metier.HashText;
 import metier.User;
 import persistance.modelDAO.UserDAO;
 
-/**
- *
- * @author Short
- */
-//@WebServlet(urlPatterns = {"controleur"})
 public class Controleur extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException, NoSuchAlgorithmException {
@@ -63,8 +58,14 @@ public class Controleur extends HttpServlet {
                 rd = request.getRequestDispatcher("complot.jsp");
                 rd.forward(request, response);
                 break;
+            
+            case "triangle":
+                rd = request.getRequestDispatcher("triangle.jsp");
+                rd.forward(request, response);
+                break;
+            
             default:
-                System.out.println("la page n'existe pas dans le 'case'");
+                System.out.println("la page " + page + " n'existe pas dans le 'case'");
                 rd = request.getRequestDispatcher("accueil.jsp");
                 rd.forward(request, response);
         }
