@@ -17,8 +17,15 @@ public class ReptiliansPopulation {
 
     public ReptiliansPopulation(String pays)
     {
+        System.out.println(pays);
         switch(pays)
-        {   case "Ping":  
+        {   
+            case "Europe": 
+                nbReptilians = 666; 
+                message ="waw"; 
+                break;
+                
+            case "Ping":  
                 nbReptilians = 51; 
                 message ="Principalement des Lolis ..."; 
                 break;

@@ -22,12 +22,14 @@
             Weapon wp = new Weapon(request.getParameter("arme"));
             
             
-            out.println("Avant : "+rp.getNbReptilians());
-            out.println("Illuminati utilise "+wp.getNom());
-            out.println("Après : "+rp.killReptilians(wp));
+            out.print("<p>Avant : "+rp.getNbReptilians()+"</p>");
+            out.print("<p>Illuminati utilise "+wp.getNom()+"</p>");
+            out.print("<p><img src='../img/Le Canard Jaune.jpg'></p>");
+            out.print("<p>Après : "+rp.killReptilians(wp)+"</p>");
+            
             if(rp.getNbReptilians() == 0 )
             {
-                out.println("It's super effective !");
+                out.println("<p>It's super effective !</p>");
             }
         %>
         

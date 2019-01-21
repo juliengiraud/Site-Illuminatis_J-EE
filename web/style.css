@@ -4,7 +4,6 @@ body
     padding: 0;
     width: 100%;
     font-family: 'Josefin Sans', sans-serif;
-    color : greenyellow;
     background-color: black;
 }
 
@@ -13,6 +12,7 @@ strong
 {
     font-size: 1.2em;
     font-weight: bold;
+    color: black; 
 }
 
 h1
@@ -20,36 +20,23 @@ h1
     font-weight: bold;
     font-size: 2em;
     text-align: center;
+    color : greenyellow;
+}
 
-}
-h2
-{
-    font-weight: bold;
-    font-size: 1.5em;
-    text-align: center;
 
-    padding: 0.5em;
-    border:solid black 2px;
-    width: 20em;
-    margin: auto;
-    margin-bottom: 1em;
-}
-h3
-{
-    font-weight: bold;
-    font-size: 1em;
-}
+
 p
 {
     text-align: center;
     font-size: 1em;
+    color : greenyellow;
 }
 
 
-#centre
+.centre 
 {
-    margin: auto;
     display: flex;
     justify-content: center;
     margin: 1em;
 }
+

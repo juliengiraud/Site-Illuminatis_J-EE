@@ -9,14 +9,28 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="style.css" />
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Désolé <%= request.getAttribute("identifiant") %>, vous n'êtes pas connectés !</h1>
-        <form action="controleur" method="post">   
-            <input type="text" name="identifiant" placeholder="Ex : Roger" size="30" maxlength="10" />
-            <input type="text" name="mdp" placeholder="Ex : Je suis pas un reptilien" size="30" maxlength="10" />
+        <h1> <%= request.getAttribute("identifiant") %>, vous êtes surement un reptilien</h1>
+        <form action="controleur" method="post">
+            
+            <div class="centre">
+                <input type="text" name="identifiant" placeholder="Ex : Roger" size="30" maxlength="10" />
+            </div>
+            
+            <div class="centre">
+                <input type="text" name="mdp" placeholder="Ex : Je suis pas un reptilien" size="30" maxlength="10" />
+            </div>
+            
             <input type="hidden" name="page" value="connexion" />
-            <input type="submit" value="Valider" />
+            
+            <div class="centre">
+                <input type="submit" value="Valider" />
+            </div>
+            
+        </form>
+        <strong> Par contre si c'est encore michel qui a oublié son mot de passe c'est 1234... pas compliqué pourtant !</strong>
     </body>
 </html>

@@ -43,7 +43,7 @@ public class Controleur extends HttpServlet {
                 }
                 request.setAttribute("identifiant", id);
                 if (user != null) {
-                    rd = request.getRequestDispatcher("accueil.jsp");
+                    rd = request.getRequestDispatcher("Accueil.jsp");
                     rd.forward(request, response);
                     break;
                 }

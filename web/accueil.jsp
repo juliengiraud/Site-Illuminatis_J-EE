@@ -18,20 +18,28 @@
         
         <h1> <%= request.getAttribute("identifiant") %></h1>
         <form action="controleur" method="post">
-            <input type="text" name="theinput" />
+            <div class="centre">
+            <label>Pays : </label>    
             <select name="pays" onChange="combo(this, 'theinput')">
               <option>Europe</option>
               <option>Ping</option>
-              <option>Amérique sud</option>
+              <option>Amérique Sud</option>
               <option>'Murica (fuck yeah)</option>
               <option>Internet</option>
               <option>Bordure extérieur</option>
             </select> 
+            </div>
+            <div class="centre">
+            <label>Arme anti-reptilien : </label>    
             <select name="arme" onChange="combo(this, 'theinput')">
               <option>Le Canard Jaune</option>
             </select> 
+            </div>
             <input type="hidden" name="page" value="complot" />
+            
+            <div class="centre">
             <input type="submit" value="Valider" />
+            </div>
         </form>
         
         <% 
