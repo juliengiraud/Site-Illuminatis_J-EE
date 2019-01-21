@@ -24,7 +24,8 @@
             
             out.print("<p>Avant : "+rp.getNbReptilians()+"</p>");
             out.print("<p>Illuminati utilise "+wp.getNom()+"</p>");
-            out.print("<p><img src='../img/Le Canard Jaune.jpg'></p>");
+            out.print("<p><img src='img/"+wp.getPath()+"'></p>");
+            out.print("<p>"+wp.getMessage()+"</p>");
             out.print("<p>Après : "+rp.killReptilians(wp)+"</p>");
             
             if(rp.getNbReptilians() == 0 )

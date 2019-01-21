@@ -14,6 +14,7 @@
     </head>
     <body>
         <h1> <%= request.getAttribute("identifiant") %>, vous êtes surement un reptilien</h1>
+        <p><img src="img/connexion.png" alt="Un oeil et un triangle" width="300" height="300"></p>
         <form action="controleur" method="post">
             
             <div class="centre">
